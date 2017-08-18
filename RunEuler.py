@@ -11,13 +11,9 @@ while 1>0:
 	except ValueError:
 		print("Not a number"); 
 		
-	to_run = "./Problems/Euler"+str(num);  
-	#print(to_run); 
-
-	try:
-		pm = __import__(to_run);
-	except ImportError:
-		print("Not a valid file"); 
+	to_run = "./problems/Euler{}.py".format(num);  
+	
+	execfile(to_run); 
 
 
 
